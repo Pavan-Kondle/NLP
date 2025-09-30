@@ -47,5 +47,59 @@
 
 ---
 
+## 5. Comprehensive Error Analysis Report
+
+### Overview
+This report provides a detailed analysis of the performance of **LSTM**, **CNN**, and **BiLSTM** models for the classification task. Models were evaluated using **accuracy, precision, recall, F1-score, and confusion matrices** to identify strengths, weaknesses, and areas for improvement.
+
+---
+
+### LSTM Model
+- **Accuracy**: ~93.32%  
+- **Precision**: 0.83 – 0.99 (high precision in most classes)  
+- **Recall**: 0.77 – 0.98 (variation across classes)  
+- **F1-score**: 0.80 – 0.99 (balanced performance)  
+- **Confusion Matrix**:  
+  - Misclassifications concentrated in **classes 1, 5, and 11**  
+  - Class 1 (P=0.83, R=0.77) and Class 5 (P=0.85, R=0.88) showed weaker performance  
+
+---
+
+### CNN Model
+- **Accuracy**: ~93.52%  
+- **Precision**: 0.84 – 0.99  
+- **Recall**: 0.81 – 0.96  
+- **F1-score**: 0.83 – 0.99  
+- **Confusion Matrix**:  
+  - Errors mostly between **classes 1, 5, and 11**  
+  - Class 1 (P=0.84, R=0.81) and Class 5 (P=0.86, R=0.89) weaker  
+
+---
+
+### BiLSTM Model
+- **Accuracy**: ~93.35%  
+- **Precision**: 0.82 – 0.99  
+- **Recall**: 0.81 – 0.94  
+- **F1-score**: 0.81 – 0.99  
+- **Confusion Matrix**:  
+  - Similar error patterns in **classes 1, 5, and 11**  
+  - Class 1 (P=0.82, R=0.81) and Class 5 (P=0.85, R=0.87) weaker  
+
+---
+
+### General Observations
+- 🔁 **Consistent Errors**: All models misclassify between classes 1, 5, and 11 → indicates intrinsic overlap in features.  
+- ⚖️ **Performance Discrepancies**: While overall accuracy is high (>93%), some classes consistently underperform.  
+- 🧩 **Model Consistency**: Different architectures (LSTM, CNN, BiLSTM) exhibit similar weaknesses, suggesting **class-level difficulty** rather than model-specific flaws.  
+
+---
+
+### Conclusion
+- All three models (**LSTM, CNN, BiLSTM**) show **high accuracy (93%+)** with strong precision, recall, and F1-scores.  
+- Common **misclassification patterns** highlight areas for targeted dataset refinement or hybrid modeling.  
+- Future work should focus on **enhancing robustness** and **reducing overlap between challenging classes** (1, 5, 11).  
+
+---
+
 
 
